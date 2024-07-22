@@ -5,7 +5,7 @@ dns_config () {
     # Use dig to fetch DNS record, extract relevant information, and format the output
     record_info=$(dig "$2"."$1" +short)
     if [[ -n "$record_info" ]]; then
-        echo "The subdomain $2 is an A record and points to $record_info"
+        echo "The subdomain $2 is a A record and points to $record_info"
     else
         echo "No record found for subdomain $2.$1"
     fi
