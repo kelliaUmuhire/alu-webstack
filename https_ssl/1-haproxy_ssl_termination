@@ -40,11 +40,11 @@ frontend oreste-frontend-http
         default_backend oreste-backend
 
 frontend oreste-frontend-https
-	bind *:443 ssl crt /etc/haproxy/certs/www.abizeraoreste.tech.pem
+	bind *:443 ssl crt /etc/haproxy/certs/www.kelliaumuhire.tech.pem
 	http-request set-header X-Forwarded-Proto https
 	default_backend oreste-backend
 
 backend oreste-backend
         balance roundrobin
-        server 6238-web-01 54.196.216.8:80 check
-        server 6238-web-02 98.80.15.59:80 check
+        server 6238-web-01 54.226.80.187:80 check
+        server 6238-web-02 184.72.124.136:80 check
